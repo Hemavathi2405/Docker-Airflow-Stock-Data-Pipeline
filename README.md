@@ -49,6 +49,7 @@ The pipeline:
 ```bash
 git clone <your-repo-url> #To clone the repository 
 cd stock-pipeline #Point to project directory
+Change the API Key in .env file --> !Important
 docker compose up --build #To build and run the project
 docker exec -it docker-airflow-stock-data-pipeline-postgres-1 psql -U stocks_user -d stocks_db #To opens the PostgreSQL database inside your Docker container
 SELECT * FROM stock_prices ORDER BY price_date DESC LIMIT 20; #To Show the latest 20 rows from the stock_prices table
